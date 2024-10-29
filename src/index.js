@@ -16,9 +16,6 @@ const routes = {
   "k8s.vangou.top": "https://registry.k8s.io",
   "ghcr.vangou.top": "https://ghcr.io",
   "cloudsmith.vangou.top": "https://docker.cloudsmith.io",
-
-  // staging
-  "docker-staging.vangou.top": dockerHub,
 };
 
 function routeByHosts(host) {
