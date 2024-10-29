@@ -1,5 +1,5 @@
-name = "cloudflare-docker-proxy"
-compatibility_date = "2023-12-01"
+name = "cloudflare-proxy"
+compatibility_date = "2024-10-29"
 
 [dev]
 ip = "0.0.0.0"
@@ -11,7 +11,7 @@ MODE = "debug"
 TARGET_UPSTREAM = "https://registry-1.docker.io"
 
 [env.production]
-name = "cloudflare-docker-proxy"
+name = "cloudflare-proxy"
 routes = [
   { pattern = "docker.vangou.top", custom_domain = true },
   { pattern = "quay.vangou.top", custom_domain = true },
@@ -24,12 +24,4 @@ routes = [
 
 [env.production.vars]
 MODE = "production"
-TARGET_UPSTREAM = ""
-
-[env.staging]
-name = "cloudflare-docker-proxy-staging"
-route = { pattern = "docker-staging.vangou.top", custom_domain = true }
-
-[env.staging.vars]
-MODE = "staging"
 TARGET_UPSTREAM = ""
